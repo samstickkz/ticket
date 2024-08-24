@@ -1,15 +1,58 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class Buttomnavbar extends StatefulWidget {
+  const Buttomnavbar({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<Buttomnavbar> createState() => _ButtomnavbarState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _ButtomnavbarState extends State<Buttomnavbar> {
+  int _selectedIndex = 0;
+
+  final Appscreens = [
+    Text('hoome'),
+    Text('sam'),
+    Text('sj'),
+    Text('sds'),
+  ];
+
+  void onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+    print('selected index: $_selectedIndex');
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Appscreens[_selectedIndex],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        onTap: onItemTapped,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
+            activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
+            label: 'Tickets',
+          ),
+        ],
+        selectedItemColor: Colors.amber[800],
+      ),
+    );
   }
 }
