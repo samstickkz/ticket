@@ -10,6 +10,7 @@ class Appstyles{
   static Color bgColor = const Color(0xFFeeedf2);
   static Color textColor2 = const Color(0xFF7b7b7b);
   static Color ticketColor = const Color(0xFF526799);
+  static Color ticketColor2 = const Color(0xFFF37B67);
 
 
   static TextStyle HeadLine = TextStyle(
