@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:untitled2/res/media.dart';
 import 'package:untitled2/res/styles/appstyles.dart';
 
+import '../widgets/apptext.dart';
+import '../widgets/ticket_view.dart';
+
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Appstyles.bgColor,
       body: ListView(
         children: [
           Padding(
@@ -41,7 +45,28 @@ class Homepage extends StatelessWidget {
                     )
                   ],
                 ),
-                Row()
+                const SizedBox(
+                  height: 20,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    prefixIcon: const Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Apptext(
+                  bigText: 'Popular',
+                  smallText: 'See all',
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                TicketView(),
               ],
             ),
           )
