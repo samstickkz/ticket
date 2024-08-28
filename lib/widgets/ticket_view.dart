@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/res/styles/appstyles.dart';
+import 'package:untitled2/widgets/ticket_circle.dart';
 import 'bigdot.dart';
 import 'flight_widget.dart';
 
@@ -14,6 +15,7 @@ class TicketView extends StatelessWidget {
       height: 189,
       child: Column(
         children: [
+          // blue part of the ticket
           Container(
             decoration: BoxDecoration(
               color: Appstyles.ticketColor,
@@ -92,42 +94,27 @@ class TicketView extends StatelessWidget {
             ),
           ),
 
-          //middle of the ticket
+          //middle of the ticket 
           Container(
             color: Appstyles.ticketColor2,
-            child: Row(
+            child: const Row(
               children: [
-                SizedBox(
-                  width: 10,
-                  height: 20,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: Appstyles.bgColor,
-                      borderRadius: const BorderRadius.only(
-                          topRight: Radius.circular(10),
-                          bottomRight: Radius.circular(10)),
-                    ),
-                  ),
+                TicketCircle(
+                  isRight: true,
                 ),
                 Expanded(
-                  child: Container(),
-                ),
-                SizedBox(
-                  width: 10,
-                  height: 20,
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      color: Appstyles.bgColor,
-                      borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(10),
-                          bottomLeft: Radius.circular(10)),
-                    ),
+                  child: AppBuilderWidget(
+                    RandomNumberDiverder: 15,
+                    width: 6,
                   ),
+                ),
+                TicketCircle(
+                  isRight: false,
                 ),
               ],
             ),
           ),
-// middle of ticket ends here
+          // Red part of the ticket
           Container(
             decoration: BoxDecoration(
               color: Appstyles.ticketColor2,

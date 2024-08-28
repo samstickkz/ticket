@@ -66,7 +66,7 @@ class Homepage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                TicketView(),
+                const TicketView(),
               ],
             ),
           )
