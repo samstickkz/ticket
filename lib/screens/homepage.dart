@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled2/res/media.dart';
 import 'package:untitled2/res/styles/appstyles.dart';
 
+import '../utils/utils.dart';
 import '../widgets/apptext.dart';
 import '../widgets/ticket_view.dart';
 
@@ -66,7 +67,15 @@ class Homepage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const TicketView(),
+                SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: ticketList
+                          .map((singleTicket) => TicketView(
+                                ticket: singleTicket,
+                      ))
+                          .toList(),
+                    )),
               ],
             ),
           )
