@@ -18,10 +18,7 @@ class Apptext extends StatelessWidget {
         InkWell(
           onTap: (){
             //navigate to all ticket screen
-          Navigator.push(context,  MaterialPageRoute (
-            builder: (BuildContext context) => const AllTickets(),
-          ),
-          );
+          Navigator.pushNamed(context, '/all_tickets');
 
           },
         child:  Text(smallText, style: appStyles.headLine3),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:untitled2/screens/all_tickets.dart';
+import 'package:untitled2/screens/homepage.dart';
 import 'buttom_nav_bar.dart';
 
 
@@ -11,9 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ButtomNavbar(),
+
+      //routes
+      routes: {
+        '/': (context) =>  const Homepage(),
+        '/all_tickets': (context) =>  const AllTickets(),
+      },
     );
   }
 }
