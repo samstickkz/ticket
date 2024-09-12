@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/res/styles/appStyles.dart';
 
+import '../screens/all_tickets.dart';
+
 class Apptext extends StatelessWidget {
   const Apptext({super.key, required this.bigText, required this.smallText});
 
@@ -15,6 +17,11 @@ class Apptext extends StatelessWidget {
         Text(bigText, style: appStyles.headLine2),
         InkWell(
           onTap: (){
+            //navigate to all ticket screen
+          Navigator.push(context,  MaterialPageRoute (
+            builder: (BuildContext context) => const AllTickets(),
+          ),
+          );
 
           },
         child:  Text(smallText, style: appStyles.headLine3),
