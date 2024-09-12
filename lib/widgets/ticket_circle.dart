@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../res/styles/appstyles.dart';
+import '../res/styles/appStyles.dart';
 
 class TicketCircle extends StatelessWidget {
   // check if the circle is at the right or left ?
@@ -14,7 +14,7 @@ class TicketCircle extends StatelessWidget {
       height: 20,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          color: Appstyles.bgColor,
+          color: appStyles.bgColor,
           borderRadius: isRight==true? const BorderRadius.only(
               topRight: Radius.circular(10),
               bottomRight: Radius.circular(10)):

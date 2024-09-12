@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled2/res/styles/appstyles.dart';
-import 'package:untitled2/utils/utils.dart';
+import 'package:untitled2/res/styles/appStyles.dart';
+
 import 'package:untitled2/widgets/ticket_circle.dart';
 import 'bigdot.dart';
 import 'flight_widget.dart';
@@ -22,7 +22,7 @@ class TicketView extends StatelessWidget {
             // blue part of the ticket
             Container(
               decoration: BoxDecoration(
-                color: Appstyles.ticketColor,
+                color: appStyles.ticketColor,
                 borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(20), topRight: Radius.circular(20)),
               ),
@@ -33,7 +33,7 @@ class TicketView extends StatelessWidget {
                     Row(
                       children: [
                         Text(ticket["from"]["code"],
-                            style: Appstyles.HeadLine3.copyWith(
+                            style: appStyles.headLine3.copyWith(
                                 color: Colors.white)),
                         Expanded(
                           child: Container(),
@@ -59,7 +59,7 @@ class TicketView extends StatelessWidget {
                           child: Container(),
                         ),
                         Text(ticket["to"]["code"],
-                            style: Appstyles.HeadLine3.copyWith(
+                            style: appStyles.headLine3.copyWith(
                                 color: Colors.white)),
                       ],
                     ),
@@ -69,7 +69,7 @@ class TicketView extends StatelessWidget {
                     Row(
                       children: [
                         Text(ticket["from"]["name"],
-                            style: Appstyles.HeadLine3.copyWith(
+                            style: appStyles.headLine3.copyWith(
                                 color: Colors.white,
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold)),
@@ -78,7 +78,7 @@ class TicketView extends StatelessWidget {
                         ),
                         Text(
                           ticket["flying_time"],
-                          style: Appstyles.HeadLine3.copyWith(
+                          style: appStyles.headLine3.copyWith(
                               color: Colors.white,
                               fontSize: 12,
                               fontWeight: FontWeight.bold),
@@ -87,7 +87,7 @@ class TicketView extends StatelessWidget {
                           child: Container(),
                         ),
                         Text(ticket["to"]["name"],
-                            style: Appstyles.HeadLine3.copyWith(
+                            style: appStyles.headLine3.copyWith(
                                 color: Colors.white,
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold)),
@@ -100,7 +100,7 @@ class TicketView extends StatelessWidget {
 
             //middle of the ticket
             Container(
-              color: Appstyles.ticketColor2,
+              color: appStyles.ticketColor2,
               child: const Row(
                 children: [
                   TicketCircle(
@@ -121,7 +121,7 @@ class TicketView extends StatelessWidget {
             // Red part of the ticket
             Container(
               decoration: BoxDecoration(
-                color: Appstyles.ticketColor2,
+                color: appStyles.ticketColor2,
                 borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(20),
                     bottomLeft: Radius.circular(20)),
@@ -133,7 +133,7 @@ class TicketView extends StatelessWidget {
                     Row(
                       children: [
                         Text('LDN',
-                            style: Appstyles.HeadLine3.copyWith(
+                            style: appStyles.headLine3.copyWith(
                                 color: Colors.white)),
                         Expanded(
                           child: Container(),
@@ -159,7 +159,7 @@ class TicketView extends StatelessWidget {
                           child: Container(),
                         ),
                         Text(ticket["number"].toString(),
-                            style: Appstyles.HeadLine3.copyWith(
+                            style: appStyles.headLine3.copyWith(
                                 color: Colors.white)),
                       ],
                     ),
@@ -169,7 +169,7 @@ class TicketView extends StatelessWidget {
                     Row(
                       children: [
                         Text(ticket['date'],
-                            style: Appstyles.HeadLine3.copyWith(
+                            style: appStyles.headLine3.copyWith(
                                 color: Colors.white,
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold)),
@@ -180,7 +180,7 @@ class TicketView extends StatelessWidget {
                         //fly time
                         Text( ticket["flying_time"]
                         ,
-                          style: Appstyles.HeadLine3.copyWith(
+                          style: appStyles.headLine3.copyWith(
                               color: Colors.white,
                               fontSize: 12,
                               fontWeight: FontWeight.bold),
@@ -189,7 +189,7 @@ class TicketView extends StatelessWidget {
                           child: Container(),
                         ),
                         Text('Number',
-                            style: Appstyles.HeadLine3.copyWith(
+                            style: appStyles.headLine3.copyWith(
                                 color: Colors.white,
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold)),

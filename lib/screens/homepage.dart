@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/res/media.dart';
-import 'package:untitled2/res/styles/appstyles.dart';
+import 'package:untitled2/res/styles/appStyles.dart';
 
 import '../utils/utils.dart';
 import '../widgets/apptext.dart';
@@ -12,7 +12,7 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Appstyles.bgColor,
+      backgroundColor: appStyles.bgColor,
       body: ListView(
         children: [
           Padding(
@@ -30,7 +30,7 @@ class Homepage extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 17, fontWeight: FontWeight.bold),
                         ),
-                        Text('Book Ticket', style: Appstyles.HeadLine),
+                        Text('Book Ticket', style: appStyles.headLine),
                       ],
                     ),
                     Container(

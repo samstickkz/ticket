@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../res/styles/appstyles.dart';
+import '../res/styles/appStyles.dart';
 
 class TextStyle3rd extends StatelessWidget {
   const TextStyle3rd({super.key});
@@ -8,7 +8,7 @@ class TextStyle3rd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Text('LDN',
-        style: Appstyles.HeadLine3.copyWith(
+        style: appStyles.headLine3.copyWith(
             color: Colors.white));
   }
 }

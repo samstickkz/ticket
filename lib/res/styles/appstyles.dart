@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
 
 
-Color primary = Color(0xFF687daF);
 
-class Appstyles{
+Color primary = const Color(0xFF687daF);
+
+class appStyles{
   static Color primaryColor = primary;
   static Color textColor = const Color(0xFF3b3b3b);
   static Color bgColor = const Color(0xFFeeedf2);
@@ -13,17 +13,17 @@ class Appstyles{
   static Color ticketColor2 = const Color(0xFFF37B67);
 
 
-  static TextStyle HeadLine = TextStyle(
+  static TextStyle headLine = TextStyle(
     fontSize: 27,
     fontWeight: FontWeight.bold,
     color: textColor,
   );
-  static TextStyle HeadLine2 = const TextStyle(
+  static TextStyle headLine2 = const TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.bold,
 
   );
-  static TextStyle HeadLine3 = const TextStyle(
+  static TextStyle headLine3 = const TextStyle(
     fontSize: 17,
 
 

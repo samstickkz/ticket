@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'ButtomNavBar.dart';
+import 'buttom_nav_bar.dart';
 
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Buttomnavbar(),
+      home: ButtomNavbar(),
     );
   }
 }

@@ -2,35 +2,35 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled2/screens/homepage.dart';
 
-class Buttomnavbar extends StatefulWidget {
-  const Buttomnavbar({super.key});
+class ButtomNavbar extends StatefulWidget {
+  const ButtomNavbar({super.key});
 
   @override
-  State<Buttomnavbar> createState() => _ButtomnavbarState();
+  State<ButtomNavbar> createState() => _ButtomNavbarState();
 }
 
-class _ButtomnavbarState extends State<Buttomnavbar> {
+class _ButtomNavbarState extends State<ButtomNavbar> {
   int _selectedIndex = 0;
 
-  final Appscreens = [
-    Homepage(),
-    Text('sam'),
-    Text('sj'),
-    Text('sds'),
+  final appScreens = [
+    const Homepage(),
+    const Text('sam'),
+    const Text('sj'),
+    const Text('sds'),
   ];
 
   void onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
-    print('selected index: $_selectedIndex');
+
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Appscreens[_selectedIndex],
+        child: appScreens[_selectedIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.grey,
