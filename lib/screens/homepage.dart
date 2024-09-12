@@ -60,22 +60,34 @@ class Homepage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const Apptext(
+                 Apptext(
                   bigText: 'Popular',
-                  smallText: 'See all',
+                  smallText: 'See all', func: () { Navigator.pushNamed(context, '/all_tickets');},
                 ),
                 const SizedBox(
                   height: 20,
                 ),
+
+                //horizontal list of tickets
                 SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: ticketList
                           .map((singleTicket) => TicketView(
                                 ticket: singleTicket,
-                      ))
+                              ))
                           .toList(),
                     )),
+
+                const SizedBox(
+                  height: 20,
+                ),
+                 Apptext(
+                  bigText: 'Hotels',
+                  smallText: 'See All', func: () { Navigator.pushNamed(context, '/all_hotels', ); },
+                ),
+
+                //horizontal list of tickets ends here
               ],
             ),
           )
