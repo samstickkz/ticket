@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/res/media.dart';
 import 'package:untitled2/res/styles/appStyles.dart';
+import 'package:untitled2/screens/widgets/hotel.dart';
 
 import '../utils/utils.dart';
 import '../widgets/apptext.dart';
@@ -78,7 +79,7 @@ class Homepage extends StatelessWidget {
                               ))
                           .toList(),
                     )),
-
+                //horizontal list of tickets ends here
                 const SizedBox(
                   height: 20,
                 ),
@@ -87,7 +88,11 @@ class Homepage extends StatelessWidget {
                   smallText: 'See All', func: () { Navigator.pushNamed(context, '/all_hotels', ); },
                 ),
 
-                //horizontal list of tickets ends here
+                //hotels starts here
+
+                Hotels()
+
+
               ],
             ),
           )
